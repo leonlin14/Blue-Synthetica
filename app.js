@@ -12,11 +12,11 @@ var serve = require('koa-static');
 // for more info, see: https://www.npmjs.com/package/cfenv
 var cfenv = require('cfenv');
 
-// create a new express server
+// create a new koa server
 var app = koa();
 
 // serve the files out of ./public as our main files
-app.use(serve(path.join(__dirname, 'public')));
+app.use(serve(path.join(__dirname, '/public')));
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
